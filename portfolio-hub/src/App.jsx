@@ -12,7 +12,7 @@ const featuredProjects = [
     features: ['Live project index', 'Status-led cards', 'Roadmap visibility', 'Contact pathway'],
     liveUrl: 'https://portfolio-hub-delta.vercel.app/',
     repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/portfolio-hub',
-    caseStudy: 'Case Study Ready',
+    caseStudy: 'Built as a client-ready small-business website prototype for the portfolio roadmap.',
     sourceNote:
       'Built as the live evolution of earlier personal portfolio drafts and refocused into a roadmap-driven proof-of-skill hub.',
   },
