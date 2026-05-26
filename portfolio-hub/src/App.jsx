@@ -19,7 +19,7 @@ const featuredProjects = [
   {
     name: 'TradeWise Dashboard',
     category: 'Analytics Product',
-    status: 'Frontend Prototype',
+    status: 'Live Frontend Prototype',
     level: 'Level 4 — Live Frontend Prototype',
     proofScore: 88,
     stage: 'Active',
@@ -38,19 +38,21 @@ const featuredProjects = [
   {
     name: 'Event Landing Page',
     category: 'Marketing Platform',
-    status: 'Frontend Prototype',
-    level: 'Level 2 — Queued Build',
+    status: 'Live Frontend Prototype',
+    level: 'Level 2 — Live Frontend Prototype',
     proofScore: 43,
-    stage: 'Queued',
+    stage: 'Active',
     description:
       'A sponsor-ready event website concept designed to communicate story, program flow, and conversion CTA with a clean responsive structure.',
     tags: ['Landing Page', 'Responsive Design', 'Sponsor UI', 'Event Website'],
     features: ['Sponsor sections', 'Program flow', 'RSVP/contact CTA', 'Venue/event storytelling'],
-    liveUrl: '',
-    repoUrl: '',
-    caseStudy: 'Coming Soon',
+    liveUrl: 'https://event-landing-page-sage-xi.vercel.app/',
+    repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/event-landing-page',
+    caseStudy: 'Built as a sponsor-facing event campaign prototype for the portfolio roadmap.',
     sourceNote:
-      'Derived from earlier event branding and planning work, now scoped into a production-ready landing page blueprint.',
+      'Created from earlier event planning, sponsor visibility, and youth activation concepts, refocused as a premium frontend campaign landing page.',
+    truthfulNote:
+      'This is a frontend portfolio prototype. It is not a live ticketing/payment platform and does not represent confirmed sponsor or venue agreements.',
   },
   {
     name: 'Business Website',
@@ -91,7 +93,7 @@ const featuredProjects = [
 const roadmapItems = [
   { name: 'Portfolio Hub', phase: 'Live', lane: 'Live', progress: 100 },
   { name: 'TradeWise Dashboard', phase: 'Live Frontend Prototype', lane: 'Active', progress: 84 },
-  { name: 'Event Landing Page', phase: 'Queued', lane: 'Queued', progress: 35 },
+  { name: 'Event Landing Page', phase: 'Live Frontend Prototype', lane: 'Active', progress: 35 },
   { name: 'Business Website', phase: 'Queued', lane: 'Queued', progress: 38 },
   { name: 'BreedFinder API App', phase: 'Queued', lane: 'Queued', progress: 34 },
   { name: 'MatchPulse / AgriSeason / RIO', phase: 'Secondary Roadmap', lane: 'Roadmap', progress: 20 },
