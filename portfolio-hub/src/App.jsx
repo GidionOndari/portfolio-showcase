@@ -3,14 +3,16 @@ const featuredProjects = [
     name: 'Portfolio Hub',
     category: 'Personal Product',
     status: 'Live Hub',
+    level: 'Level 5 — Live System',
+    proofScore: 94,
+    stage: 'Live',
     description:
       'The central portfolio hub presenting identity, skills, featured projects, build process, experience, and contact details with clear project progress states.',
     tags: ['React', 'Vite', 'Portfolio', 'Deployment Ready'],
     features: ['Live project index', 'Status-led cards', 'Roadmap visibility', 'Contact pathway'],
-    liveUrl: 'https://gidionondari.github.io/portfolio-hub/',
+    liveUrl: 'https://portfolio-hub-delta.vercel.app/',
     repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/portfolio-hub',
     caseStudy: 'Case Study Ready',
-    image: '/images/gidion-hackathon.jpg',
     sourceNote:
       'Built as the live evolution of earlier personal portfolio drafts and refocused into a roadmap-driven proof-of-skill hub.',
   },
@@ -18,17 +20,18 @@ const featuredProjects = [
     name: 'TradeWise Dashboard',
     category: 'Analytics Product',
     status: 'Frontend Prototype',
+    level: 'Level 4 — Live Frontend Prototype',
+    proofScore: 88,
+    stage: 'Active',
     description:
       'A trading advisory dashboard prototype focused on clear decision-support patterns for summaries, risk posture, and strategy tracking.',
     tags: ['React', 'Dashboard UI', 'Risk Logic', 'Data UX'],
     features: ['Risk monitor', 'Signal cards', 'Strategy status', 'Trade journal UI'],
-    liveUrl: '',
+    liveUrl: 'https://tradewise-dashboard-one.vercel.app/',
     repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/tradewise-dashboard',
     caseStudy: 'Built as the first flagship dashboard proof project in the portfolio roadmap.',
-    image: '/images/gidion-legal-awareness.jpg',
     sourceNote:
       'Created from earlier trading dashboard and advisory decision-support concepts, refocused as a frontend-only portfolio prototype with mock data.',
-    liveLabelPending: 'Deploy Pending',
     truthfulNote:
       'This is not a live trading bot. It has no broker execution, no MT5 connection, and no live market API.',
   },
@@ -36,19 +39,16 @@ const featuredProjects = [
     name: 'Event Landing Page',
     category: 'Marketing Platform',
     status: 'Frontend Prototype',
+    level: 'Level 2 — Queued Build',
+    proofScore: 43,
+    stage: 'Queued',
     description:
       'A sponsor-ready event website concept designed to communicate story, program flow, and conversion CTA with a clean responsive structure.',
     tags: ['Landing Page', 'Responsive Design', 'Sponsor UI', 'Event Website'],
-    features: [
-      'Sponsor sections',
-      'Program flow',
-      'RSVP/contact CTA',
-      'Venue/event storytelling',
-    ],
+    features: ['Sponsor sections', 'Program flow', 'RSVP/contact CTA', 'Venue/event storytelling'],
     liveUrl: '',
     repoUrl: '',
     caseStudy: 'Coming Soon',
-    image: '/images/gidion-safaricom-hook.jpg',
     sourceNote:
       'Derived from earlier event branding and planning work, now scoped into a production-ready landing page blueprint.',
   },
@@ -56,6 +56,9 @@ const featuredProjects = [
     name: 'Business Website',
     category: 'Business Presence',
     status: 'Case Study Ready',
+    level: 'Level 2 — Case Study Ready',
+    proofScore: 51,
+    stage: 'Queued',
     description:
       'A responsive small-business website prototype centered on services, pricing confidence, and direct inquiry conversion.',
     tags: ['Business Website', 'Services UI', 'Contact Flow', 'Responsive Design'],
@@ -63,7 +66,6 @@ const featuredProjects = [
     liveUrl: '',
     repoUrl: '',
     caseStudy: 'Case Study Ready',
-    image: '/images/gidion-safaricom-hook.jpg',
     sourceNote:
       'Refined from earlier local-business website concepts into a conversion-focused and trust-oriented service platform case.',
   },
@@ -71,6 +73,9 @@ const featuredProjects = [
     name: 'BreedFinder API App',
     category: 'API Application',
     status: 'API Prototype',
+    level: 'Level 2 — API Prototype',
+    proofScore: 46,
+    stage: 'Queued',
     description:
       'An API-based mini app for discovering dog breeds with practical data handling, state management, and UI feedback patterns.',
     tags: ['JavaScript', 'API Fetching', 'Search', 'Local Storage'],
@@ -78,115 +83,75 @@ const featuredProjects = [
     liveUrl: '',
     repoUrl: '',
     caseStudy: 'Coming Soon',
-    image: '/images/gidion-hackathon.jpg',
     sourceNote:
       'Started from prior API practice builds and re-scoped as a polished frontend-plus-data handling prototype for portfolio proof.',
   },
 ]
 
 const roadmapItems = [
-  { name: 'Portfolio Hub', phase: 'live' },
-  { name: 'TradeWise Dashboard', phase: 'built locally, deploy pending' },
-  { name: 'Event Landing Page', phase: 'queued' },
-  { name: 'Business Website', phase: 'queued' },
-  { name: 'BreedFinder API App', phase: 'queued' },
-  { name: 'MatchPulse / AgriSeason / RIO', phase: 'secondary roadmap' },
+  { name: 'Portfolio Hub', phase: 'Live', lane: 'Live', progress: 100 },
+  { name: 'TradeWise Dashboard', phase: 'Live Frontend Prototype', lane: 'Active', progress: 84 },
+  { name: 'Event Landing Page', phase: 'Queued', lane: 'Queued', progress: 35 },
+  { name: 'Business Website', phase: 'Queued', lane: 'Queued', progress: 38 },
+  { name: 'BreedFinder API App', phase: 'Queued', lane: 'Queued', progress: 34 },
+  { name: 'MatchPulse / AgriSeason / RIO', phase: 'Secondary Roadmap', lane: 'Roadmap', progress: 20 },
 ]
-
-const secondaryProjects = ['MatchPulse', 'AgriSeason Planner', 'RIO Assistant UI']
 
 const skillCategories = [
-  { title: 'Frontend', skills: 'React, JavaScript, HTML, CSS, Responsive UI' },
-  { title: 'Backend', skills: 'Node.js, Express, Flask, REST APIs' },
-  { title: 'Databases', skills: 'PostgreSQL, SQLite, Prisma, SQLAlchemy' },
-  { title: 'Tools', skills: 'Git, GitHub, VS Code, Vercel, GitHub Pages' },
-  {
-    title: 'Product Thinking',
-    skills: 'Dashboards, Landing Pages, Automation Tools, Admin Panels, API Apps',
-  },
+  { title: 'Frontend', skills: ['React', 'JavaScript', 'HTML', 'CSS', 'Responsive UI'] },
+  { title: 'Backend', skills: ['Node.js', 'Express', 'Flask', 'REST APIs'] },
+  { title: 'Databases', skills: ['PostgreSQL', 'SQLite', 'Prisma', 'SQLAlchemy'] },
+  { title: 'Tools', skills: ['Git', 'GitHub', 'VS Code', 'Vercel', 'GitHub Pages'] },
+  { title: 'Product Thinking', skills: ['Dashboards', 'Landing Pages', 'Automation Tools', 'Admin Panels', 'API Apps'] },
 ]
 
-const heroMetrics = ['5 Showcase Builds', 'Full-Stack Focus', 'Deployment Ready']
-const aboutHighlights = ['Web Platforms', 'Dashboards', 'Intelligent Systems']
+const heroMetrics = ['5 Showcase Builds', '2 Live Prototypes', 'Recruiter-Ready Portfolio']
+
+const quickInfo = [
+  'Role: Full-Stack Developer',
+  'Focus: Web Platforms + Dashboards',
+  'Availability: Internship / Junior / Freelance',
+  'Location: Kenya / Remote',
+  'Flagship: TradeWise Dashboard Live',
+]
 
 function ProjectActionButton({ href, variant, activeLabel, inactiveLabel, name }) {
   if (href) {
-    return (
-      <a href={href} className={`btn ${variant}`} target="_blank" rel="noreferrer" aria-label={`${name} ${activeLabel}`}>
-        {activeLabel}
-      </a>
-    )
+    return <a href={href} className={`btn ${variant}`} target="_blank" rel="noreferrer" aria-label={`${name} ${activeLabel}`}>{activeLabel}</a>
   }
-
-  return (
-    <span className={`btn ${variant} btn-disabled`} role="status" aria-label={`${name} ${inactiveLabel}`}>
-      {inactiveLabel}
-    </span>
-  )
+  return <span className={`btn ${variant} btn-disabled`} role="status" aria-label={`${name} ${inactiveLabel}`}>{inactiveLabel}</span>
 }
 
-function ProjectCard({ project, stage = 'Coming Soon' }) {
-  const status = project.status || stage
-
+function ProjectCard({ project }) {
   return (
-    <article className="card project-card">
+    <article className={`card project-card stage-${project.stage.toLowerCase()}`}>
       <div className="project-accent" />
       <div className="project-top">
-        <span className="badge">{status}</span>
-        <span className="category-label">{project.category || 'Portfolio Build'}</span>
+        <span className="badge">{project.status}</span>
+        <span className="category-label">{project.category}</span>
       </div>
       <h3>{project.name}</h3>
       <p>{project.description}</p>
-
-      {project.features?.length ? (
-        <ul className="project-features">
-          {project.features.map((feature) => (
-            <li key={`${project.name}-${feature}`}>{feature}</li>
-          ))}
-        </ul>
-      ) : null}
-
-      <div className="project-meta">
-        <p>
-          <span>Case Study:</span> {project.caseStudy || 'Coming Soon'}
-        </p>
-        {project.sourceNote ? (
-          <p>
-            <span>Source Note:</span> {project.sourceNote}
-          </p>
-        ) : null}
-        {project.truthfulNote ? (
-          <p>
-            <span>Truthful Note:</span> {project.truthfulNote}
-          </p>
-        ) : null}
+      <div className="project-gamified">
+        <p className="project-level">{project.level}</p>
+        <div className="proof-row"><span>Proof Score</span><strong>{project.proofScore}%</strong></div>
+        <div className="progress-track"><span style={{ width: `${project.proofScore}%` }} /></div>
+        <span className={`stage-chip ${project.stage.toLowerCase()}`}>{project.stage}</span>
       </div>
-
-      {project.tags ? (
-        <div className="tag-list">
-          {project.tags.map((tag) => (
-            <span className="tag" key={`${project.name}-${tag}`}>
-              {tag}
-            </span>
-          ))}
-        </div>
-      ) : null}
-
+      <ul className="project-features">
+        {project.features.map((feature) => <li key={`${project.name}-${feature}`}>{feature}</li>)}
+      </ul>
+      <div className="tag-list">
+        {project.tags.map((tag) => <span className="tag" key={`${project.name}-${tag}`}>✓ {tag}</span>)}
+      </div>
+      <div className="project-meta">
+        <p><span>Case Study:</span> {project.caseStudy}</p>
+        <p><span>Source Note:</span> {project.sourceNote}</p>
+        {project.truthfulNote ? <p><span>Truthful Note:</span> {project.truthfulNote}</p> : null}
+      </div>
       <div className="project-actions">
-        <ProjectActionButton
-          href={project.liveUrl}
-          variant="btn-primary"
-          activeLabel="Live Demo"
-          inactiveLabel={project.liveLabelPending || 'Demo Coming Soon'}
-          name={project.name}
-        />
-        <ProjectActionButton
-          href={project.repoUrl}
-          variant="btn-outline"
-          activeLabel="GitHub Repo"
-          inactiveLabel={project.repoLabelPending || 'Repo Pending'}
-          name={project.name}
-        />
+        <ProjectActionButton href={project.liveUrl} variant="btn-primary" activeLabel="Live Demo" inactiveLabel="Demo Coming Soon" name={project.name} />
+        <ProjectActionButton href={project.repoUrl} variant="btn-outline" activeLabel="GitHub Repo" inactiveLabel="Repo Pending" name={project.name} />
       </div>
     </article>
   )
@@ -196,232 +161,101 @@ export default function App() {
   return (
     <div className="site-shell">
       <header className="navbar">
-        <div className="brand">Gidion Ondari</div>
+        <div className="brand gradient-text-soft">Gidion Ondari</div>
         <nav>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
+          <a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
         </nav>
       </header>
-
       <main>
         <section className="hero">
           <div className="hero-content">
-            <span className="status-pill">Available for full-stack opportunities</span>
-            <p className="eyebrow">Full-Stack Developer</p>
-            <h1>I build practical web platforms, dashboards, and intelligent systems.</h1>
-            <p className="hero-subheadline">
-              I’m Gidion Ondari, a full-stack developer creating clean, usable digital
-              products with frontend, backend, API, database, and system design thinking.
-            </p>
+            <span className="status-pill">Available for internships, junior roles, and freelance builds</span>
+            <p className="eyebrow gradient-text-soft">Full-Stack Developer</p>
+            <h1>I&apos;m <span className="hero-name">Gidion Ondari</span></h1>
+            <p className="hero-subheadline">I build practical <span className="highlight-text">web platforms</span>, dashboards, automation tools, and intelligent decision systems for real user outcomes.</p>
+            <p className="hero-location">Kenya / Remote · Open to product-focused development work.</p>
             <div className="hero-actions">
-              <a href="#projects" className="btn btn-primary">
-                View Projects
-              </a>
-              <a href="#contact" className="btn btn-outline">
-                Contact Me
-              </a>
+              <a href="#projects" className="btn btn-primary">View Projects</a>
+              <a href="#contact" className="btn btn-outline">Contact Me</a>
             </div>
-            <div className="metric-grid">
-              {heroMetrics.map((metric) => (
-                <article className="metric-card" key={metric}>
-                  <span className="metric-dot">•</span>
-                  <p>{metric}</p>
-                </article>
-              ))}
-            </div>
+            <div className="metric-grid">{heroMetrics.map((metric) => <article className="metric-card" key={metric}><span className="metric-dot">●</span><p className="gradient-text-soft">{metric}</p></article>)}</div>
           </div>
-
-          <figure className="hero-visual image-frame premium-image">
-            <img
-              src="/images/gidion-hackathon.jpg"
-              alt="Gidion Ondari standing beside a Design Thinking Hackathon banner, representing practical innovation and problem-solving work."
-            />
-            <figcaption>Hackathon participation shaping practical product thinking.</figcaption>
-          </figure>
+          <div className="hero-side card">
+            <h3 className="gradient-text">Recruiter Quick Info</h3>
+            <ul className="quick-info-list">{quickInfo.map((item) => <li key={item}>{item}</li>)}</ul>
+          </div>
         </section>
 
         <section id="about" className="section card about-card">
-          <div className="about-grid">
-            <div>
-              <h2>About</h2>
-              <p>
-                I’m a full-stack developer building practical, usable software products across web
-                platforms, dashboards, automation tools, and intelligent systems. My current focus
-                is turning earlier learning and prototype work into clean, deployed,
-                portfolio-ready projects.
-              </p>
-              <div className="highlight-chips">
-                {aboutHighlights.map((item) => (
-                  <span className="chip" key={item}>
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <figure className="image-frame snapshot-image premium-image">
-              <img
-                src="/images/gidion-legal-awareness.jpg"
-                alt="Gidion Ondari during a legal awareness event, reflecting professional communication and public engagement experience."
-              />
-              <figcaption>Professional snapshot from legal awareness engagement.</figcaption>
-            </figure>
-          </div>
+          <h2 className="gradient-text">About</h2>
+          <p>I&apos;m a full-stack developer focused on practical, recruiter-verifiable product builds across web platforms, dashboards, automation tools, and intelligent systems.</p>
         </section>
 
         <section className="section">
-          <h2>Skills</h2>
+          <h2 className="gradient-text">Tech Capability Stack</h2>
           <div className="grid skills-grid">
             {skillCategories.map((category) => (
               <article className="card skill-group" key={category.title}>
-                <span className="skill-accent">// {category.title}</span>
                 <h3>{category.title}</h3>
-                <p>{category.skills}</p>
+                <ul className="tick-list">{category.skills.map((skill) => <li key={`${category.title}-${skill}`}>{skill}</li>)}</ul>
               </article>
             ))}
           </div>
         </section>
 
-        <section id="projects" className="section">
-          <h2>Featured Projects</h2>
-          <div className="grid projects-grid">
-            {featuredProjects.map((project) => (
-              <ProjectCard key={project.name} project={project} />
-            ))}
+        <section className="section card recruiter-scan">
+          <h2 className="gradient-text">Recruiter Quick Scan</h2>
+          <div className="scan-grid">
+            <p><span>Who:</span> Gidion Ondari</p>
+            <p><span>Role:</span> Full-Stack Developer</p>
+            <p><span>Focus:</span> Web platforms, dashboards, automation tools, intelligent systems</p>
+            <p><span>Strongest live proof:</span> TradeWise Dashboard</p>
+            <p><span>Experience edge:</span> Safaricom Hook brand activation + product/event planning</p>
+            <p><span>Open to:</span> internships, junior roles, freelance builds, collaborations</p>
+            <p><span>Contact:</span> ondarigidion@gmail.com · +254742917779</p>
           </div>
         </section>
 
+        <section id="projects" className="section">
+          <h2 className="gradient-text">Featured Projects</h2>
+          <div className="grid projects-grid">{featuredProjects.map((project) => <ProjectCard key={project.name} project={project} />)}</div>
+        </section>
+
         <section className="section card roadmap-section">
-          <h2>Portfolio Roadmap</h2>
-          <p>
-            This portfolio is being built intentionally in phases, starting from the live hub and
-            progressing through prioritized product builds.
-          </p>
+          <h2 className="gradient-text">Portfolio Roadmap</h2>
+          <p>Build progression system showing what is live, active, queued, and on secondary roadmap.</p>
           <ul className="roadmap-list">
             {roadmapItems.map((item) => (
-              <li key={item.name}>
-                <span>{item.name}</span>
-                <strong>{item.phase}</strong>
+              <li key={item.name} className={`lane-${item.lane.toLowerCase()}`}>
+                <div><span>{item.name}</span><strong>{item.phase}</strong></div>
+                <span className={`stage-chip ${item.lane.toLowerCase()}`}>{item.lane}</span>
+                <div className="progress-track"><span style={{ width: `${item.progress}%` }} /></div>
               </li>
             ))}
           </ul>
         </section>
 
-        <section className="section">
-          <h2>Secondary Projects</h2>
-          <div className="grid projects-grid secondary-grid">
-            {secondaryProjects.map((project) => (
-              <ProjectCard
-                key={project}
-                project={{
-                  name: project,
-                  category: 'Roadmap Concept',
-                  status: 'Coming Soon',
-                  description:
-                    'Planned portfolio build in discovery and design phase. Scope and implementation details will be published as development begins.',
-                  features: ['Scope definition', 'Wireframe direction', 'Build milestones'],
-                  caseStudy: 'Coming Soon',
-                  sourceNote:
-                    'Roadmap concept from earlier project idea notes; implementation details will be published once active build starts.',
-                }}
-              />
-            ))}
-          </div>
-        </section>
-
         <section id="experience" className="section">
-          <h2>Experience</h2>
+          <h2 className="gradient-text">Experience</h2>
           <div className="grid experience-grid">
-            <article className="card experience-card feature-experience">
-              <figure className="image-frame experience-image premium-image">
-                <img
-                  src="/images/gidion-safaricom-hook.jpg"
-                  alt="Gidion Ondari at a Safaricom Hook event activation, supporting youth engagement and brand communication."
-                />
-                <figcaption>Safaricom Hook activation experience.</figcaption>
-              </figure>
-              <h3>Safaricom Hook Brand Ambassador</h3>
-              <p>
-                Supported campus activations, community engagement, and program communication with
-                a focus on youth-oriented digital experiences.
-              </p>
-            </article>
-            <article className="card experience-card">
-              <h3>Full-Stack Development Training</h3>
-              <p>
-                Built foundational and intermediate projects across frontend, backend, API
-                workflows, and database integration while strengthening deployment and
-                maintainability discipline.
-              </p>
-            </article>
-            <article className="card experience-card">
-              <h3>Product & Event Planning</h3>
-              <p>
-                Coordinated planning flows, audience communication, and structured execution for
-                community and event initiatives that required clear user journeys and practical
-                outcomes.
-              </p>
-            </article>
+            <article className="card experience-card"><h3>Safaricom Hook Brand Activation</h3><p>Supported youth engagement and communication flows in live event contexts with practical coordination discipline.</p></article>
+            <article className="card experience-card"><h3>Full-Stack Development Training</h3><p>Built frontend/backend/API/database projects while improving deployment and maintainability habits.</p></article>
+            <article className="card experience-card"><h3>Product & Event Planning</h3><p>Worked on planning, audience communication, and product/event execution structure.</p></article>
           </div>
-        </section>
-
-        <section className="section card">
-          <h2>Build Process</h2>
-          <ol>
-            <li>Define practical problem and user-facing goals.</li>
-            <li>Design clean interfaces and data flows.</li>
-            <li>Implement frontend and backend in incremental iterations.</li>
-            <li>Test, refine, and document outcomes transparently.</li>
-          </ol>
         </section>
 
         <section id="contact" className="section card contact-section">
-          <h2>Contact</h2>
-          <p>
-            Open to collaboration, internships, junior full-stack roles, freelance websites,
-            dashboard builds, and product-focused development work.
-          </p>
-
+          <h2 className="gradient-text">Contact</h2>
+          <p className="contact-cta">Reach out for internships, junior full-stack roles, freelance websites, dashboard builds, or product-focused collaboration.</p>
           <div className="contact-grid">
-            <a className="contact-item" href="mailto:ondarigidion@gmail.com">
-              <span className="contact-label">Email</span>
-              <span className="contact-value">ondarigidion@gmail.com</span>
-            </a>
-            <a className="contact-item" href="tel:+254705749265">
-              <span className="contact-label">Phone</span>
-              <span className="contact-value">+254 705 749 265</span>
-            </a>
-            <a
-              className="contact-item"
-              href="https://www.linkedin.com/in/gidion-ondari-6a9410324"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="contact-label">LinkedIn</span>
-              <span className="contact-value">gidion-ondari-6a9410324</span>
-            </a>
-            <a
-              className="contact-item"
-              href="https://github.com/GidionOndari"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="contact-label">GitHub</span>
-              <span className="contact-value">github.com/GidionOndari</span>
-            </a>
-            <div className="contact-item contact-static">
-              <span className="contact-label">Location</span>
-              <span className="contact-value">Nairobi, Kenya</span>
-            </div>
+            <a className="contact-item" href="mailto:ondarigidion@gmail.com"><span className="contact-label">Email</span><span className="contact-value">ondarigidion@gmail.com</span></a>
+            <a className="contact-item" href="tel:+254742917779"><span className="contact-label">WhatsApp / Phone</span><span className="contact-value">+254742917779</span></a>
+            <a className="contact-item" href="https://github.com/GidionOndari" target="_blank" rel="noreferrer"><span className="contact-label">GitHub</span><span className="contact-value">github.com/GidionOndari</span></a>
+            <div className="contact-item contact-static"><span className="contact-label">Location</span><span className="contact-value">Kenya / Remote</span></div>
           </div>
         </section>
       </main>
-
-      <footer className="footer">
-        <span>© {new Date().getFullYear()} Gidion Ondari</span>
-        <span>Designed and built with React + Vite</span>
-      </footer>
+      <footer className="footer"><span>© {new Date().getFullYear()} Gidion Ondari</span><span>Designed and built with React + Vite</span></footer>
     </div>
   )
 }
