@@ -1,30 +1,35 @@
 const featuredProjects = [
   {
     name: 'TradeWise Dashboard',
+    category: 'Analytics Product',
     description:
       'A trading advisory dashboard prototype showing market summaries, signal cards, risk status, strategy state, and trade journal data in a clean decision-support interface.',
     tags: ['React', 'Dashboard UI', 'Risk Logic', 'Data UX'],
   },
   {
     name: 'Event Landing Page',
+    category: 'Marketing Platform',
     description:
       'A sponsor-ready event website for a finalist costume dinner, designed to present the event concept, program flow, venue, sponsors, and attendee call-to-action.',
     tags: ['Landing Page', 'Responsive Design', 'Sponsor UI', 'Event Website'],
   },
   {
     name: 'Business Website',
+    category: 'Business Presence',
     description:
       'A responsive business website prototype for a local brand, focused on services, pricing, trust-building content, and contact conversion.',
     tags: ['Business Website', 'Services UI', 'Contact Flow', 'Responsive Design'],
   },
   {
     name: 'BreedFinder API App',
+    category: 'API Application',
     description:
       'An API-based mini app for searching dog breeds, viewing breed images, filtering results, and saving favorites in a clean responsive interface.',
     tags: ['JavaScript', 'API Fetching', 'Search', 'Local Storage'],
   },
   {
     name: 'Portfolio Website',
+    category: 'Personal Product',
     description:
       'The central portfolio hub presenting identity, skills, featured projects, build process, experience, and contact information in one professional page.',
     tags: ['React', 'Vite', 'Portfolio', 'Deployment Ready'],
@@ -44,10 +49,17 @@ const skillCategories = [
   },
 ]
 
+const heroMetrics = ['5 Showcase Builds', 'Full-Stack Focus', 'Deployment Ready']
+const aboutHighlights = ['Web Platforms', 'Dashboards', 'Intelligent Systems']
+
 function ProjectCard({ project, stage = 'Active Build' }) {
   return (
     <article className="card project-card">
-      <div className="badge">{stage}</div>
+      <div className="project-accent" />
+      <div className="project-top">
+        <span className="badge">{stage}</span>
+        <span className="category-label">{project.category || 'Portfolio Build'}</span>
+      </div>
       <h3>{project.name}</h3>
       <p>{project.description}</p>
       {project.tags ? (
@@ -86,7 +98,8 @@ export default function App() {
 
       <main>
         <section className="hero">
-          <div>
+          <div className="hero-content">
+            <span className="status-pill">Available for full-stack opportunities</span>
             <p className="eyebrow">Full-Stack Developer</p>
             <h1>I build practical web platforms, dashboards, and intelligent systems.</h1>
             <p className="hero-subheadline">
@@ -101,9 +114,17 @@ export default function App() {
                 Contact Me
               </a>
             </div>
+            <div className="metric-grid">
+              {heroMetrics.map((metric) => (
+                <article className="metric-card" key={metric}>
+                  <span className="metric-dot">•</span>
+                  <p>{metric}</p>
+                </article>
+              ))}
+            </div>
           </div>
 
-          <figure className="hero-visual image-frame">
+          <figure className="hero-visual image-frame premium-image">
             <img
               src="/images/gidion-hackathon.jpg"
               alt="Gidion Ondari standing beside a Design Thinking Hackathon banner, representing practical innovation and problem-solving work."
@@ -112,18 +133,25 @@ export default function App() {
           </figure>
         </section>
 
-        <section id="about" className="section card">
+        <section id="about" className="section card about-card">
           <div className="about-grid">
             <div>
               <h2>About</h2>
               <p>
-                I’m a full-stack developer building practical, usable software products
-                across web platforms, dashboards, automation tools, and intelligent
-                systems. My current focus is turning earlier learning and prototype work
-                into clean, deployed, portfolio-ready projects.
+                I’m a full-stack developer building practical, usable software products across web
+                platforms, dashboards, automation tools, and intelligent systems. My current focus
+                is turning earlier learning and prototype work into clean, deployed,
+                portfolio-ready projects.
               </p>
+              <div className="highlight-chips">
+                {aboutHighlights.map((item) => (
+                  <span className="chip" key={item}>
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
-            <figure className="image-frame snapshot-image">
+            <figure className="image-frame snapshot-image premium-image">
               <img
                 src="/images/gidion-legal-awareness.jpg"
                 alt="Gidion Ondari during a legal awareness event, reflecting professional communication and public engagement experience."
@@ -138,6 +166,7 @@ export default function App() {
           <div className="grid skills-grid">
             {skillCategories.map((category) => (
               <article className="card skill-group" key={category.title}>
+                <span className="skill-accent">// {category.title}</span>
                 <h3>{category.title}</h3>
                 <p>{category.skills}</p>
               </article>
@@ -162,6 +191,7 @@ export default function App() {
                 key={project}
                 project={{
                   name: project,
+                  category: 'Roadmap Concept',
                   description:
                     'Planned portfolio build in discovery and design phase. Scope and implementation details will be published as development begins.',
                 }}
@@ -174,8 +204,8 @@ export default function App() {
         <section id="experience" className="section">
           <h2>Experience</h2>
           <div className="grid experience-grid">
-            <article className="card experience-card">
-              <figure className="image-frame experience-image">
+            <article className="card experience-card feature-experience">
+              <figure className="image-frame experience-image premium-image">
                 <img
                   src="/images/gidion-safaricom-hook.jpg"
                   alt="Gidion Ondari at a Safaricom Hook event activation, supporting youth engagement and brand communication."
@@ -184,24 +214,24 @@ export default function App() {
               </figure>
               <h3>Safaricom Hook Brand Ambassador</h3>
               <p>
-                Supported campus activations, community engagement, and program
-                communication with a focus on youth-oriented digital experiences.
+                Supported campus activations, community engagement, and program communication with
+                a focus on youth-oriented digital experiences.
               </p>
             </article>
-            <article className="card">
+            <article className="card experience-card">
               <h3>Full-Stack Development Training</h3>
               <p>
-                Built foundational and intermediate projects across frontend, backend,
-                API workflows, and database integration while strengthening deployment
-                and maintainability discipline.
+                Built foundational and intermediate projects across frontend, backend, API
+                workflows, and database integration while strengthening deployment and
+                maintainability discipline.
               </p>
             </article>
-            <article className="card">
+            <article className="card experience-card">
               <h3>Product & Event Planning</h3>
               <p>
-                Coordinated planning flows, audience communication, and structured
-                execution for community and event initiatives that required clear user
-                journeys and practical outcomes.
+                Coordinated planning flows, audience communication, and structured execution for
+                community and event initiatives that required clear user journeys and practical
+                outcomes.
               </p>
             </article>
           </div>
@@ -217,13 +247,37 @@ export default function App() {
           </ol>
         </section>
 
-        <section id="contact" className="section card">
+        <section id="contact" className="section card contact-section">
           <h2>Contact</h2>
           <p>
-            Open to collaboration, internships, and full-stack engineering
-            opportunities.
+            Open to collaboration, internships, junior full-stack roles, freelance websites,
+            dashboard builds, and product-focused development work.
           </p>
-          <a className="btn btn-primary" href="#">
+
+          <div className="contact-grid">
+            <a className="contact-item" href="mailto:ondarigidion@gmail.com">
+              <span className="contact-label">Email</span>
+              <span className="contact-value">ondarigidion@gmail.com</span>
+            </a>
+            <a className="contact-item" href="https://wa.me/254742917779">
+              <span className="contact-label">WhatsApp</span>
+              <span className="contact-value">+254742917779</span>
+            </a>
+            <a className="contact-item" href="tel:+254742917779">
+              <span className="contact-label">Phone</span>
+              <span className="contact-value">+254742917779</span>
+            </a>
+            <a className="contact-item" href="https://github.com/GidionOndari" target="_blank" rel="noreferrer">
+              <span className="contact-label">GitHub</span>
+              <span className="contact-value">github.com/GidionOndari</span>
+            </a>
+            <div className="contact-item contact-static">
+              <span className="contact-label">Location</span>
+              <span className="contact-value">Kenya / Remote</span>
+            </div>
+          </div>
+
+          <a className="btn btn-primary" href="mailto:ondarigidion@gmail.com">
             Send Email
           </a>
         </section>
