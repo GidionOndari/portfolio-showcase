@@ -76,19 +76,21 @@ const featuredProjects = [
   {
     name: 'BreedFinder API App',
     category: 'API Application',
-    status: 'API Prototype',
-    level: 'Level 2 — API Prototype',
-    proofScore: 46,
-    stage: 'Queued',
+    status: 'Live API Prototype',
+    level: 'Level 3 — Live API Prototype',
+    proofScore: 82,
+    stage: 'Active',
     description:
       'An API-based mini app for discovering dog breeds with practical data handling, state management, and UI feedback patterns.',
     tags: ['JavaScript', 'API Fetching', 'Search', 'Local Storage'],
     features: ['API fetching', 'Search/filter', 'Favorites', 'Loading/error states'],
-    liveUrl: '',
-    repoUrl: '',
-    caseStudy: 'Coming Soon',
+    liveUrl: 'https://breedfinder-api-app.vercel.app/',
+    repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/breedfinder-api-app',
+    caseStudy: 'Built as a live API interaction prototype for the portfolio roadmap.',
     sourceNote:
-      'Started from prior API practice builds and re-scoped as a polished frontend-plus-data handling prototype for portfolio proof.',
+      'Created from earlier API practice ideas and refocused into a polished React app demonstrating fetch, search, favorites, image previews, localStorage, loading states, and fallback handling.',
+    truthfulNote:
+      'This is a frontend API prototype. It uses public dog breed data where available and does not use a backend or private database.',
   },
 ]
 
@@ -97,7 +99,7 @@ const roadmapItems = [
   { name: 'TradeWise Dashboard', phase: 'Live Frontend Prototype', lane: 'Active', progress: 84 },
   { name: 'Event Landing Page', phase: 'Live Frontend Prototype', lane: 'Active', progress: 35 },
   { name: 'Business Website', phase: 'Live Frontend Prototype', lane: 'Active', progress: 76 },
-  { name: 'BreedFinder API App', phase: 'Queued', lane: 'Queued', progress: 34 },
+  { name: 'BreedFinder API App', phase: 'Live API Prototype', lane: 'Active', progress: 82 },
   { name: 'MatchPulse / AgriSeason / RIO', phase: 'Secondary Roadmap', lane: 'Roadmap', progress: 20 },
 ]
 
@@ -109,7 +111,7 @@ const skillCategories = [
   { title: 'Product Thinking', skills: ['Dashboards', 'Landing Pages', 'Automation Tools', 'Admin Panels', 'API Apps'] },
 ]
 
-const heroMetrics = ['5 Showcase Builds', '3 Live Prototypes', 'Recruiter-Ready Portfolio']
+const heroMetrics = ['5 Showcase Builds', '4 Live Prototypes', 'Recruiter-Ready Portfolio']
 
 const quickInfo = [
   'Role: Full-Stack Developer',
@@ -214,6 +216,7 @@ export default function App() {
             <p><span>Role:</span> Full-Stack Developer</p>
             <p><span>Focus:</span> Web platforms, dashboards, automation tools, intelligent systems</p>
             <p><span>Strongest live proof:</span> TradeWise Dashboard</p>
+            <p><span>Live proofs:</span> TradeWise, Event Landing Page, Business Website, BreedFinder API App.</p>
             <p><span>Experience edge:</span> Safaricom Hook brand activation + product/event planning</p>
             <p><span>Open to:</span> internships, junior roles, freelance builds, collaborations</p>
             <p><span>Contact:</span> ondarigidion@gmail.com · +254742917779</p>
