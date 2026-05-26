@@ -12,7 +12,7 @@ const featuredProjects = [
     features: ['Live project index', 'Status-led cards', 'Roadmap visibility', 'Contact pathway'],
     liveUrl: 'https://portfolio-hub-delta.vercel.app/',
     repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/portfolio-hub',
-    caseStudy: 'Case Study Ready',
+    caseStudy: 'Built as a client-ready small-business website prototype for the portfolio roadmap.',
     sourceNote:
       'Built as the live evolution of earlier personal portfolio drafts and refocused into a roadmap-driven proof-of-skill hub.',
   },
@@ -57,19 +57,21 @@ const featuredProjects = [
   {
     name: 'Business Website',
     category: 'Business Presence',
-    status: 'Case Study Ready',
-    level: 'Level 2 — Case Study Ready',
-    proofScore: 51,
-    stage: 'Queued',
+    status: 'Live Frontend Prototype',
+    level: 'Level 3 — Live Business Prototype',
+    proofScore: 76,
+    stage: 'Active',
     description:
       'A responsive small-business website prototype centered on services, pricing confidence, and direct inquiry conversion.',
     tags: ['Business Website', 'Services UI', 'Contact Flow', 'Responsive Design'],
     features: ['Service sections', 'Pricing/product cards', 'WhatsApp CTA', 'Trust-building layout'],
-    liveUrl: '',
-    repoUrl: '',
-    caseStudy: 'Case Study Ready',
+    liveUrl: 'https://business-website-smoky-phi.vercel.app/',
+    repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/business-website',
+    caseStudy: 'Built as a client-ready small-business website prototype for the portfolio roadmap.',
     sourceNote:
-      'Refined from earlier local-business website concepts into a conversion-focused and trust-oriented service platform case.',
+      'Created from earlier local-business and product website ideas, refocused as a fresh black/green/red/white skincare business prototype with direct WhatsApp inquiry flow.',
+    truthfulNote:
+      'This is a frontend portfolio prototype. It is not a live ecommerce/payment platform and does not include checkout, payment processing, or live inventory.',
   },
   {
     name: 'BreedFinder API App',
@@ -94,7 +96,7 @@ const roadmapItems = [
   { name: 'Portfolio Hub', phase: 'Live', lane: 'Live', progress: 100 },
   { name: 'TradeWise Dashboard', phase: 'Live Frontend Prototype', lane: 'Active', progress: 84 },
   { name: 'Event Landing Page', phase: 'Live Frontend Prototype', lane: 'Active', progress: 35 },
-  { name: 'Business Website', phase: 'Queued', lane: 'Queued', progress: 38 },
+  { name: 'Business Website', phase: 'Live Frontend Prototype', lane: 'Active', progress: 76 },
   { name: 'BreedFinder API App', phase: 'Queued', lane: 'Queued', progress: 34 },
   { name: 'MatchPulse / AgriSeason / RIO', phase: 'Secondary Roadmap', lane: 'Roadmap', progress: 20 },
 ]
@@ -107,7 +109,7 @@ const skillCategories = [
   { title: 'Product Thinking', skills: ['Dashboards', 'Landing Pages', 'Automation Tools', 'Admin Panels', 'API Apps'] },
 ]
 
-const heroMetrics = ['5 Showcase Builds', '2 Live Prototypes', 'Recruiter-Ready Portfolio']
+const heroMetrics = ['5 Showcase Builds', '3 Live Prototypes', 'Recruiter-Ready Portfolio']
 
 const quickInfo = [
   'Role: Full-Stack Developer',
