@@ -112,6 +112,7 @@ export default function App() {
   return (
     <div className="app-shell">
       <header className="hero card">
+        <div className="hero-visual media-frame"><img src="/images/breedfinder-hero.jpg" alt="Premium dog portrait hero visual for BreedFinder" /><p>Breed discovery experience</p></div>
         <p className="status-pill">API Prototype</p>
         <h1>BreedFinder</h1>
         <p className="tagline">API-powered dog breed explorer</p>
@@ -138,6 +139,10 @@ export default function App() {
           <button className="btn btn-outline" onClick={() => setSearchTerm('')}>Clear Search</button>
         </div>
         {appError ? <p className="app-error">{appError}</p> : null}
+      </section>
+
+      <section className="card media-support">
+        <div className="media-frame"><img src="/images/breedfinder-app-mockup.jpg" alt="BreedFinder application mockup showing search-driven API interaction" loading="lazy" /><p>Search-driven API interaction</p></div>
       </section>
 
       <section className="card">
@@ -182,6 +187,10 @@ export default function App() {
             ))}
           </ul>
         )}
+      </section>
+
+      <section className="card media-support">
+        <div className="media-frame"><img src="/images/breedfinder-premium-dogs.jpg" alt="Premium breed showcase featuring elegant dog portraits" loading="lazy" /><p>Premium breed showcase</p></div>
       </section>
 
       <section className="card learning-section">

@@ -59,6 +59,10 @@ export default function App() {
   return (
     <div className="page">
       <header className="hero panel-glass">
+        <figure className="event-image hero-image">
+          <img src="/images/finalists-hero.jpg" alt="Kenyan finalists in premium runway presentation" />
+          <figcaption>Kenyan finalist runway identity</figcaption>
+        </figure>
         <div className="status-row">
           <span className="status-pill">Sponsor-ready concept</span>
           <span className="readiness">Event readiness: Level 4 / 5</span>
@@ -128,6 +132,7 @@ export default function App() {
       <section className="section">
         <h2>Venue Layout Concept</h2>
         <div className="grid-3">
+          <figure className="event-image"><img src="/images/finalists-venue.jpg" alt="Sponsor-ready venue with stage, runway, and VIP ambience" loading="lazy" /><figcaption>Sponsor-ready venue ambience</figcaption></figure>
           {[
             'Main stage + VIP + runway',
             'Sponsor Village 1',
@@ -144,6 +149,7 @@ export default function App() {
       <section className="section">
         <h2>Audience & Impact</h2>
         <div className="panel-glass">
+          <figure className="event-image"><img src="/images/finalists-ambience.jpg" alt="Premium gala atmosphere with audience and event lighting" loading="lazy" /><figcaption>Premium gala atmosphere</figcaption></figure>
           <p><strong>Target audience:</strong> Finalists, Class of 2026, and the wider youth community.</p>
           <p><strong>Purpose:</strong> Celebration, connection, confidence-building, and meaningful brand interaction.</p>
           <p><strong>Sponsor value:</strong> Direct youth engagement and memorable experience placement.</p>
@@ -153,11 +159,12 @@ export default function App() {
       <section className="section">
         <h2>Gallery / Visual Moments</h2>
         <div className="grid-3">
+          <figure className="event-image"><img src="/images/finalists-runway.jpg" alt="Runway and costume showcase featuring finalists" loading="lazy" /><figcaption>Runway and costume showcase</figcaption></figure>
           {galleryMoments.map((moment) => (
             <article key={moment} className="panel-glass gallery-card">
               <span className="badge">Moment Badge</span>
               <h3>{moment}</h3>
-              <p>Styled placeholder for campaign photography/video storytelling.</p>
+              <p>Designed for campaign photography, sponsor content, and event recap storytelling.</p>
             </article>
           ))}
         </div>
