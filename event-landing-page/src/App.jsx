@@ -60,7 +60,7 @@ export default function App() {
     <div className="page">
       <header className="hero panel-glass">
         <figure className="event-image hero-image">
-          <img src="/images/finalists-hero.jpg" alt="Kenyan finalists in premium runway presentation" />
+          <img src="/images/finalists-runway.jpg" alt="Kenyan finalists in premium runway presentation" />
           <figcaption>Kenyan finalist runway identity</figcaption>
         </figure>
         <div className="status-row">
@@ -159,7 +159,7 @@ export default function App() {
       <section className="section">
         <h2>Gallery / Visual Moments</h2>
         <div className="grid-3">
-          <figure className="event-image"><img src="/images/finalists-runway.jpg" alt="Runway and costume showcase featuring finalists" loading="lazy" /><figcaption>Runway and costume showcase</figcaption></figure>
+          <figure className="event-image"><img src="/images/finalists-hero.jpg" alt="Runway and costume showcase featuring finalists" loading="lazy" /><figcaption>Runway and costume showcase</figcaption></figure>
           {galleryMoments.map((moment) => (
             <article key={moment} className="panel-glass gallery-card">
               <span className="badge">Moment Badge</span>
