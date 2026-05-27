@@ -60,7 +60,7 @@ export default function App() {
     <div className="page">
       <header className="hero panel-glass">
         <figure className="event-image hero-image">
-          <img src="/images/finalists-runway.jpg" alt="Kenyan finalists in premium runway presentation" />
+          <img src="/images/finalists-kenyan-hero.jpg" alt="Kenyan finalists in black red and gold runway presentation" />
           <figcaption>Kenyan finalist runway identity</figcaption>
         </figure>
         <div className="status-row">
@@ -175,8 +175,8 @@ export default function App() {
           <h2>Partner with the experience</h2>
           <div className="grid-3 cta-cards">
             <article><h3>Register interest</h3><p>Status: Open for collaboration</p></article>
-            <article><h3>Contact organizer</h3><p>Email: ondarigidion@gmail.com</p></article>
-            <article><h3>WhatsApp / Phone</h3><p>+254742917779</p></article>
+            <article><h3>Contact organizer</h3><p><a href="mailto:ondarigidion@gmail.com">Email: ondarigidion@gmail.com</a></p></article>
+            <article><h3>WhatsApp / Phone</h3><p><a href="https://wa.me/254742917779" target="_blank" rel="noreferrer">+254742917779</a></p></article>
           </div>
         </div>
       </section>

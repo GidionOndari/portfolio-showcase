@@ -182,10 +182,10 @@ export default function App() {
           </div>
           <div className="hero-side card image-frame">
             <SafeImage
-              src="/images/b-live.jpg"
-              alt="Gidion Ondari profile visual from B-Live event"
-              fallbackTitle="B-Live hero image pending"
-              fallbackHint="Asset path: /images/b-live.jpg. Portfolio visual identity panel is ready and will auto-render once the image is added."
+              src="/images/gidion-safaricom-hook.jpg"
+              alt="Gidion Ondari during Safaricom Hook brand activation"
+              fallbackTitle="Safaricom Hook hero image pending"
+              fallbackHint="Add /images/gidion-safaricom-hook.jpg to activate the personal hero visual."
               className="hero-image"
               eager
             />
@@ -239,7 +239,7 @@ export default function App() {
           <p>Available for internships, junior full-stack roles, freelance websites, dashboard builds, and product-focused collaborations.</p>
           <div className="contact-grid">
             <a className="contact-item" href="mailto:ondarigidion@gmail.com">Email: ondarigidion@gmail.com</a>
-            <a className="contact-item" href="tel:+254742917779">WhatsApp / Phone: +254742917779</a>
+            <a className="contact-item" href="https://wa.me/254742917779" target="_blank" rel="noreferrer">WhatsApp / Phone: +254742917779</a>
             <a className="contact-item" href="https://github.com/GidionOndari" target="_blank" rel="noreferrer">GitHub: https://github.com/GidionOndari</a>
           </div>
         </section>
