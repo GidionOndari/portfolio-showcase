@@ -2,33 +2,248 @@ import { useState } from 'react'
 
 const featuredProjects = [
   {
-    name: 'Portfolio Hub', category: 'Personal Product', status: 'Live Hub', level: 'Level 5 — Live System', proofScore: 94, stage: 'Live',
-    description: 'The central portfolio hub presenting identity, skills, featured projects, build process, experience, and contact details with clear project progress states.',
+    name: 'Portfolio Hub',
+    category: 'Personal Product',
+    status: 'Live Hub',
+    level: 'Level 5 — Live System',
+    proofScore: 94,
+    stage: 'Live',
+    description:
+      'The central portfolio hub presenting identity, skills, featured projects, build process, experience, and contact details with clear project progress states.',
     tags: ['React', 'Vite', 'Portfolio', 'Deployment Ready'],
     features: ['Live project index', 'Status-led cards', 'Roadmap visibility', 'Contact pathway'],
-    liveUrl: 'https://portfolio-hub-delta.vercel.app/', repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/portfolio-hub',
-    caseStudy: 'Built as a recruiter-facing portfolio command center that proves practical frontend + product storytelling skills.',
-    sourceNote: 'Evolved from earlier personal portfolio drafts into a richer roadmap-driven proof-of-skill hub.',
+    liveUrl: 'https://portfolio-hub-delta.vercel.app/',
+    repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/portfolio-hub',
+    caseStudy:
+      'Built as a recruiter-facing portfolio command center that proves practical frontend + product storytelling skills.',
+    sourceNote:
+      'Evolved from earlier personal portfolio drafts into a richer roadmap-driven proof-of-skill hub.',
   },
   {
-    name: 'TradeWise Dashboard', category: 'Analytics Product', status: 'Live Frontend Prototype', level: 'Level 4 — Live Frontend Prototype', proofScore: 88, stage: 'Active',
-    description: 'A trading advisory dashboard prototype focused on clear decision-support patterns for summaries, risk posture, and strategy tracking.',
-    tags: ['React', 'Dashboard UI', 'Risk Logic', 'Data UX'], features: ['Risk monitor', 'Signal cards', 'Strategy status', 'Trade journal UI'],
-    liveUrl: 'https://tradewise-dashboard-one.vercel.app/', repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/tradewise-dashboard',
+    name: 'TradeWise Dashboard',
+    category: 'Analytics Product',
+    status: 'Live Frontend Prototype',
+    level: 'Level 4 — Live Frontend Prototype',
+    proofScore: 88,
+    stage: 'Active',
+    description:
+      'A trading advisory dashboard prototype focused on clear decision-support patterns for summaries, risk posture, and strategy tracking.',
+    tags: ['React', 'Dashboard UI', 'Risk Logic', 'Data UX'],
+    features: ['Risk monitor', 'Signal cards', 'Strategy status', 'Trade journal UI'],
+    liveUrl: 'https://tradewise-dashboard-one.vercel.app/',
+    repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/tradewise-dashboard',
     caseStudy: 'Built as the first flagship dashboard proof project in the portfolio roadmap.',
-    sourceNote: 'Created from advisory and decision-support concepts, refocused as a frontend portfolio prototype with mock data.',
-    truthfulNote: 'This is not a live trading bot. It has no broker execution, no MT5 connection, and no live market API.',
+    sourceNote:
+      'Created from advisory and decision-support concepts, refocused as a frontend portfolio prototype with mock data.',
+    truthfulNote:
+      'This is not a live trading bot. It has no broker execution, no MT5 connection, and no live market API.',
   },
-  { name: 'Event Landing Page', category: 'Marketing Platform', status: 'Live Frontend Prototype', level: 'Level 2 — Live Frontend Prototype', proofScore: 43, stage: 'Active', description: 'A sponsor-ready event website concept designed to communicate story, program flow, and conversion CTA with a clean responsive structure.', tags: ['Landing Page', 'Responsive Design', 'Sponsor UI', 'Event Website'], features: ['Sponsor sections', 'Program flow', 'RSVP/contact CTA', 'Venue/event storytelling'], liveUrl: 'https://event-landing-page-sage-xi.vercel.app/', repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/event-landing-page', caseStudy: 'Built as a sponsor-facing event campaign prototype for the portfolio roadmap.', sourceNote: 'Created from event planning and youth activation concepts, refocused as a premium frontend campaign landing page.', truthfulNote: 'This is a frontend portfolio prototype. It is not a live ticketing/payment platform and does not represent confirmed sponsor or venue agreements.' },
-  { name: 'PureGlow Business Website', category: 'Business Presence', status: 'Live Frontend Prototype', level: 'Level 3 — Live Business Prototype', proofScore: 76, stage: 'Active', description: 'A responsive small-business website prototype centered on services, pricing confidence, and direct inquiry conversion.', tags: ['Business Website', 'Services UI', 'Contact Flow', 'Responsive Design'], features: ['Service sections', 'Pricing/product cards', 'WhatsApp CTA', 'Trust-building layout'], liveUrl: 'https://business-website-smoky-phi.vercel.app/', repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/business-website', caseStudy: 'Built as a client-ready small-business website prototype for the portfolio roadmap.', sourceNote: 'Refined from local-business concepts into a premium beauty/business prototype with direct WhatsApp inquiry flow.', truthfulNote: 'This is a frontend portfolio prototype. It is not a live ecommerce/payment platform and does not include checkout, payment processing, or live inventory.' },
-  { name: 'BreedFinder API App', category: 'API Application', status: 'Live API Prototype', level: 'Level 3 — Live API Prototype', proofScore: 82, stage: 'Active', description: 'An API-based mini app for discovering dog breeds with practical data handling, state management, and UI feedback patterns.', tags: ['JavaScript', 'API Fetching', 'Search', 'Local Storage'], features: ['API fetching', 'Search/filter', 'Favorites', 'Loading/error states'], liveUrl: 'https://breedfinder-api-app.vercel.app/', repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/breedfinder-api-app', caseStudy: 'Built as a live API interaction prototype for the portfolio roadmap.', sourceNote: 'Refocused into a polished React app showing fetch, search, favorites, image previews, and fallback handling.', truthfulNote: 'This is a frontend API prototype. It uses public dog breed data where available and does not use a backend or private database.' },
+  {
+    name: 'Event Landing Page',
+    category: 'Marketing Platform',
+    status: 'Live Frontend Prototype',
+    level: 'Level 2 — Live Frontend Prototype',
+    proofScore: 43,
+    stage: 'Active',
+    description:
+      'A sponsor-ready event website concept designed to communicate story, program flow, and conversion CTA with a clean responsive structure.',
+    tags: ['Landing Page', 'Responsive Design', 'Sponsor UI', 'Event Website'],
+    features: ['Sponsor sections', 'Program flow', 'RSVP/contact CTA', 'Venue/event storytelling'],
+    liveUrl: 'https://event-landing-page-sage-xi.vercel.app/',
+    repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/event-landing-page',
+    caseStudy: 'Built as a sponsor-facing event campaign prototype for the portfolio roadmap.',
+    sourceNote:
+      'Created from event planning and youth activation concepts, refocused as a premium frontend campaign landing page.',
+    truthfulNote:
+      'This is a frontend portfolio prototype. It is not a live ticketing/payment platform and does not represent confirmed sponsor or venue agreements.',
+  },
+  {
+    name: 'PureGlow Business Website',
+    category: 'Business Presence',
+    status: 'Live Frontend Prototype',
+    level: 'Level 3 — Live Business Prototype',
+    proofScore: 76,
+    stage: 'Active',
+    description:
+      'A responsive small-business website prototype centered on services, pricing confidence, and direct inquiry conversion.',
+    tags: ['Business Website', 'Services UI', 'Contact Flow', 'Responsive Design'],
+    features: ['Service sections', 'Pricing/product cards', 'WhatsApp CTA', 'Trust-building layout'],
+    liveUrl: 'https://business-website-smoky-phi.vercel.app/',
+    repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/business-website',
+    caseStudy: 'Built as a client-ready small-business website prototype for the portfolio roadmap.',
+    sourceNote:
+      'Refined from local-business concepts into a premium beauty/business prototype with direct WhatsApp inquiry flow.',
+    truthfulNote:
+      'This is a frontend portfolio prototype. It is not a live ecommerce/payment platform and does not include checkout, payment processing, or live inventory.',
+  },
+  {
+    name: 'BreedFinder API App',
+    category: 'API Application',
+    status: 'Live API Prototype',
+    level: 'Level 3 — Live API Prototype',
+    proofScore: 82,
+    stage: 'Active',
+    description:
+      'An API-based mini app for discovering dog breeds with practical data handling, state management, and UI feedback patterns.',
+    tags: ['JavaScript', 'API Fetching', 'Search', 'Local Storage'],
+    features: ['API fetching', 'Search/filter', 'Favorites', 'Loading/error states'],
+    liveUrl: 'https://breedfinder-api-app.vercel.app/',
+    repoUrl: 'https://github.com/GidionOndari/portfolio-showcase/tree/main/breedfinder-api-app',
+    caseStudy: 'Built as a live API interaction prototype for the portfolio roadmap.',
+    sourceNote:
+      'Refocused into a polished React app showing fetch, search, favorites, image previews, and fallback handling.',
+    truthfulNote:
+      'This is a frontend API prototype. It uses public dog breed data where available and does not use a backend or private database.',
+  },
 ]
-const roadmapItems=[{name:'Portfolio Hub',phase:'Live',lane:'Live',progress:100},{name:'TradeWise Dashboard',phase:'Live Frontend Prototype',lane:'Active',progress:84},{name:'Event Landing Page',phase:'Live Frontend Prototype',lane:'Active',progress:35},{name:'Business Website',phase:'Live Frontend Prototype',lane:'Active',progress:76},{name:'BreedFinder API App',phase:'Live API Prototype',lane:'Active',progress:82},{name:'MatchPulse / AgriSeason / RIO',phase:'Secondary Roadmap',lane:'Roadmap',progress:20}]
-const skills=[{title:'Frontend',skills:['React','JavaScript','HTML','CSS','Responsive UI']},{title:'Backend',skills:['Node.js','Express','Flask','REST APIs']},{title:'Databases',skills:['PostgreSQL','SQLite','Prisma','SQLAlchemy']},{title:'Tools',skills:['Git','GitHub','VS Code','Vercel','GitHub Pages']},{title:'Product Thinking',skills:['Dashboards','Landing Pages','Automation Tools','Admin Panels','API Apps']}]
-const heroMetrics=['5 Showcase Builds','4 Live Prototypes','Recruiter-Ready Portfolio']
-const badges=['Full-Stack Developer','Dashboard Builder','Automation Tools','AI Decision Systems','Event & Brand Experience']
 
-function SafeImage({ src, alt, placeholder, className = '', eager = false }) { const [ok, setOk] = useState(true); return ok ? <img src={src} alt={alt} className={className} loading={eager ? undefined : 'lazy'} onError={() => setOk(false)} /> : <div className="fallback">{placeholder}</div> }
-function ProjectCard({project}){return <article className="card interactive-card spotlight-card project-card"><div className="project-top"><span className="badge">{project.status}</span><span className="category-label">{project.category}</span></div><h3>{project.name}</h3><p>{project.description}</p><p className="project-level">{project.level}</p><div className="proof-row"><span>Proof Score</span><strong>{project.proofScore}%</strong></div><div className="progress-track"><span style={{width:`${project.proofScore}%`}}/></div><span className={`stage-chip ${project.stage.toLowerCase()}`}>{project.stage}</span><ul className="project-features">{project.features.map((f)=><li key={f}>{f}</li>)}</ul><div className="tag-list">{project.tags.map((t)=><span className="tag" key={t}>{t}</span>)}</div><div className="project-meta"><p><span>Case Study:</span> {project.caseStudy}</p><p><span>Source Note:</span> {project.sourceNote}</p>{project.truthfulNote?<p><span>Truthful Note:</span> {project.truthfulNote}</p>:null}</div><div className="project-actions"><a className="btn btn-primary shine" href={project.liveUrl} target="_blank" rel="noreferrer">Live Demo</a><a className="btn btn-outline" href={project.repoUrl} target="_blank" rel="noreferrer">GitHub Repo</a></div></article>}
+const roadmapItems = [
+  { name: 'Portfolio Hub', phase: 'Live', lane: 'Live', progress: 100 },
+  { name: 'TradeWise Dashboard', phase: 'Live Frontend Prototype', lane: 'Active', progress: 84 },
+  { name: 'Event Landing Page', phase: 'Live Frontend Prototype', lane: 'Active', progress: 35 },
+  { name: 'Business Website', phase: 'Live Frontend Prototype', lane: 'Active', progress: 76 },
+  { name: 'BreedFinder API App', phase: 'Live API Prototype', lane: 'Active', progress: 82 },
+  { name: 'MatchPulse / AgriSeason / RIO', phase: 'Secondary Roadmap', lane: 'Roadmap', progress: 20 },
+]
 
-export default function App(){return <div className="site-shell"><header className="navbar"><div className="brand gradient-text">Gidion Ondari</div><nav><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav></header><main><section className="hero"><div className="hero-content"><p className="eyebrow">Full-Stack Developer</p><h1>Gidion Ondari — Full-Stack Developer focused on web platforms, dashboards, automation tools, and intelligent decision systems.</h1><div className="badge-row">{badges.map((b)=><span className="tag floating" key={b}>{b}</span>)}</div><div className="hero-actions"><a href="#projects" className="btn btn-primary">View Featured Projects</a><a href="#contact" className="btn btn-outline">Book a Conversation</a></div><div className="metric-grid">{heroMetrics.map((m)=><article className="metric-card" key={m}><span>✦</span><p>{m}</p></article>)}</div></div><div className="hero-side card image-frame"><SafeImage src="/images/b-live.jpg" alt="Gidion Ondari profile visual from B-Live event" placeholder="B-Live hero image slot" className="skeleton" eager/><p>Professional profile anchor for recruiter context</p></div></section><section id="about" className="section card"><h2 className="gradient-text">About</h2><p>I build practical, recruiter-verifiable full-stack solutions across web platforms, dashboards, automation tools, and intelligent decision systems with focus on clarity, reliability, and outcome-driven UX.</p></section><section className="section"><h2 className="gradient-text">Tech Capability Stack</h2><div className="grid skills-grid">{skills.map((c)=><article className="card interactive-card" key={c.title}><h3>{c.title}</h3><ul className="tick-list">{c.skills.map((s)=><li key={s}>{s}</li>)}</ul></article>)}</div></section><section className="section card"><h2 className="gradient-text">Recruiter Quick Scan</h2><div className="scan-grid"><p><span>Who:</span> Gidion Ondari</p><p><span>Role:</span> Full-Stack Developer</p><p><span>Focus:</span> Web platforms, dashboards, automation tools, intelligent systems</p><p><span>Strongest live proof:</span> TradeWise Dashboard</p><p><span>Live proofs:</span> TradeWise, Event Landing Page, Business Website, BreedFinder API App</p><p><span>Experience edge:</span> Safaricom Hook brand activation + product/event planning</p><p><span>Open to:</span> internships, junior roles, freelance builds, collaborations</p><p><span>Contact:</span> ondarigidion@gmail.com · +254742917779</p></div></section><section id="projects" className="section"><h2 className="gradient-text">Featured Projects</h2><div className="grid projects-grid">{featuredProjects.map((p)=><ProjectCard key={p.name} project={p}/>)}</div></section><section className="section card"><h2 className="gradient-text">Portfolio Roadmap</h2><ul className="roadmap-list">{roadmapItems.map((i)=><li key={i.name}><div><span>{i.name}</span><strong>{i.phase}</strong></div><span className={`stage-chip ${i.lane.toLowerCase()}`}>{i.lane}</span><div className="progress-track"><span style={{width:`${i.progress}%`}}/></div></li>)}</ul></section><section id="experience" className="section"><h2 className="gradient-text">Experience</h2><div className="grid experience-grid"><article className="card image-frame"><SafeImage src="/images/gidion-safaricom-hook.jpg" alt="Gidion at Safaricom Hook brand activation" placeholder="Safaricom Hook experience image slot"/><h3>Safaricom Hook Brand Activation</h3><p>Supported youth engagement and communication flows in live event contexts with practical coordination discipline.</p></article><article className="card image-frame"><SafeImage src="/images/gidion-hackathon.jpg" alt="Gidion during hackathon build session" placeholder="Hackathon experience image slot"/><h3>Full-Stack Development Training</h3><p>Built frontend/backend/API/database projects while improving deployment and maintainability habits.</p></article><article className="card image-frame"><SafeImage src="/images/gidion-legal-awareness.jpg" alt="Gidion during legal awareness communication event" placeholder="Professional communication image slot"/><h3>Product & Event Planning</h3><p>Worked on planning, audience communication, and product/event execution structure.</p></article></div></section><section id="contact" className="section card"><h2 className="gradient-text">Contact</h2><p>Reach out for internships, junior full-stack roles, freelance websites, dashboard builds, and product-focused collaboration.</p><div className="contact-grid"><a className="contact-item" href="mailto:ondarigidion@gmail.com">Email: ondarigidion@gmail.com</a><a className="contact-item" href="tel:+254742917779">WhatsApp / Phone: +254742917779</a><a className="contact-item" href="https://github.com/GidionOndari" target="_blank" rel="noreferrer">GitHub: github.com/GidionOndari</a></div></section></main></div>}
+const skills = [
+  { title: 'Frontend', skills: ['React', 'JavaScript', 'HTML', 'CSS', 'Responsive UI'] },
+  { title: 'Backend', skills: ['Node.js', 'Express', 'Flask', 'REST APIs'] },
+  { title: 'Databases', skills: ['PostgreSQL', 'SQLite', 'Prisma', 'SQLAlchemy'] },
+  { title: 'Tools', skills: ['Git', 'GitHub', 'VS Code', 'Vercel', 'GitHub Pages'] },
+  { title: 'Product Thinking', skills: ['Dashboards', 'Landing Pages', 'Automation Tools', 'Admin Panels', 'API Apps'] },
+]
+
+const heroMetrics = ['5 Showcase Builds', '4 Live Prototypes', 'Recruiter-Ready Portfolio']
+const badges = ['Full-Stack Developer', 'Dashboard Builder', 'Automation Tools', 'AI Decision Systems', 'Event & Brand Experience']
+const heroChips = ['Full-Stack Portfolio', 'Live Project Proof', 'Nairobi / Remote Ready', 'Web Platforms + Dashboards']
+
+function SafeImage({ src, alt, className = '', eager = false, fallbackTitle, fallbackHint }) {
+  const [ok, setOk] = useState(true)
+  return ok ? (
+    <img src={src} alt={alt} className={className} loading={eager ? undefined : 'lazy'} onError={() => setOk(false)} />
+  ) : (
+    <div className="fallback premium-fallback" role="img" aria-label={fallbackTitle}>
+      <strong>{fallbackTitle}</strong>
+      <p>{fallbackHint}</p>
+    </div>
+  )
+}
+
+function ProjectCard({ project }) {
+  return (
+    <article className="card interactive-card spotlight-card project-card">
+      <div className="project-top">
+        <span className="badge">{project.status}</span>
+        <span className="category-label">{project.category}</span>
+      </div>
+      <h3>{project.name}</h3>
+      <p>{project.description}</p>
+      <p className="project-level">{project.level}</p>
+      <div className="proof-row"><span>Proof Score</span><strong>{project.proofScore}%</strong></div>
+      <div className="progress-track"><span style={{ width: `${project.proofScore}%` }} /></div>
+      <span className={`stage-chip ${project.stage.toLowerCase()}`}>{project.stage}</span>
+      <ul className="project-features">{project.features.map((f) => <li key={f}>{f}</li>)}</ul>
+      <div className="tag-list">{project.tags.map((t) => <span className="tag" key={t}>{t}</span>)}</div>
+      <div className="project-meta">
+        <p><span>Case Study:</span> {project.caseStudy}</p>
+        <p><span>Source Note:</span> {project.sourceNote}</p>
+        {project.truthfulNote ? <p><span>Truthful Note:</span> {project.truthfulNote}</p> : null}
+      </div>
+      <div className="project-actions">
+        <a className="btn btn-primary shine" href={project.liveUrl} target="_blank" rel="noreferrer">Live Demo</a>
+        <a className="btn btn-outline" href={project.repoUrl} target="_blank" rel="noreferrer">GitHub Repo</a>
+      </div>
+    </article>
+  )
+}
+
+export default function App() {
+  return (
+    <div className="site-shell">
+      <header className="navbar card">
+        <div className="brand gradient-text">Gidion Ondari</div>
+        <nav>
+          <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#roadmap">Roadmap</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+        </nav>
+      </header>
+      <main>
+        <section className="hero">
+          <div className="hero-content">
+            <p className="eyebrow">Full-Stack Developer</p>
+            <h1>Gidion Ondari — Full-Stack Developer focused on web platforms, dashboards, automation tools, and intelligent decision systems.</h1>
+            <p className="support-copy">I build practical web platforms, dashboards, automation tools, and intelligent decision-support interfaces with a focus on clean UX, deployment-ready structure, and product storytelling.</p>
+            <div className="badge-row">{badges.map((b) => <span className="tag floating" key={b}>{b}</span>)}</div>
+            <div className="hero-actions">
+              <a href="#projects" className="btn btn-primary shine">View Featured Projects</a>
+              <a href="#contact" className="btn btn-outline">Contact / Hire Me</a>
+            </div>
+            <div className="metric-grid">{heroMetrics.map((m) => <article className="metric-card" key={m}><span>✦</span><p>{m}</p></article>)}</div>
+          </div>
+          <div className="hero-side card image-frame">
+            <SafeImage
+              src="/images/b-live.jpg"
+              alt="Gidion Ondari profile visual from B-Live event"
+              fallbackTitle="B-Live hero image pending"
+              fallbackHint="Asset path: /images/b-live.jpg. Portfolio visual identity panel is ready and will auto-render once the image is added."
+              className="hero-image"
+              eager
+            />
+            <div className="hero-chip-grid">{heroChips.map((item) => <span key={item} className="hero-chip">{item}</span>)}</div>
+          </div>
+        </section>
+
+        <section id="about" className="section card">
+          <h2 className="gradient-text">About</h2>
+          <p>I focus on practical full-stack delivery: interfaces people can use immediately, backend structures that scale cleanly, and project architecture that is clear enough for teams to extend.</p>
+          <p>My strongest direction is web platforms and dashboard experiences where decisions must be made quickly and confidently, supported by automation tools and intelligent decision-system style interfaces.</p>
+          <p>Beyond pure coding, my Safaricom Hook activation and event planning background sharpens product storytelling, execution discipline, and real-world communication—valuable for building portfolio proofs that recruiters can evaluate fast.</p>
+        </section>
+
+        <section id="skills" className="section">
+          <h2 className="gradient-text">Tech Capability Stack</h2>
+          <div className="grid skills-grid">{skills.map((c) => <article className="card interactive-card" key={c.title}><h3>{c.title}</h3><ul className="tick-list">{c.skills.map((s) => <li key={s}>{s}</li>)}</ul></article>)}</div>
+        </section>
+
+        <section className="section card recruiter-scan">
+          <h2 className="gradient-text">Recruiter Quick Scan</h2>
+          <div className="scan-grid">
+            <p><span>Who:</span> Gidion Ondari</p><p><span>Role:</span> Full-Stack Developer</p>
+            <p><span>Focus:</span> Web platforms, dashboards, automation tools, intelligent systems</p><p><span>Strongest live proof:</span> TradeWise Dashboard</p>
+            <p><span>Live proofs:</span> TradeWise, Event Landing Page, Business Website, BreedFinder API App</p><p><span>Experience edge:</span> Safaricom Hook brand activation + product/event planning</p>
+            <p><span>Open to:</span> internships, junior roles, freelance builds, collaborations</p><p><span>Contact:</span> ondarigidion@gmail.com · +254742917779</p>
+          </div>
+        </section>
+
+        <section id="projects" className="section">
+          <h2 className="gradient-text">Featured Projects</h2>
+          <div className="grid projects-grid">{featuredProjects.map((p) => <ProjectCard key={p.name} project={p} />)}</div>
+        </section>
+
+        <section id="roadmap" className="section card">
+          <h2 className="gradient-text">Portfolio Roadmap</h2>
+          <ul className="roadmap-list">{roadmapItems.map((i) => <li key={i.name}><div className="roadmap-header"><span>{i.name}</span><strong>{i.phase}</strong><span className={`stage-chip ${i.lane.toLowerCase()}`}>{i.lane}</span></div><div className="progress-track"><span style={{ width: `${i.progress}%` }} /></div></li>)}</ul>
+        </section>
+
+        <section id="experience" className="section">
+          <h2 className="gradient-text">Experience</h2>
+          <div className="grid experience-grid">
+            <article className="card image-frame"><SafeImage src="/images/gidion-safaricom-hook.jpg" alt="Gidion at Safaricom Hook brand activation" fallbackTitle="Safaricom Hook image pending" fallbackHint="Add /images/gidion-safaricom-hook.jpg to enable this proof visual." /><h3>Safaricom Hook Brand Activation</h3><p>Supported youth engagement and communication flows in live event contexts with practical coordination discipline.</p></article>
+            <article className="card image-frame"><SafeImage src="/images/gidion-hackathon.jpg" alt="Gidion during hackathon build session" fallbackTitle="Hackathon image pending" fallbackHint="Add /images/gidion-hackathon.jpg to enable this proof visual." /><h3>Full-Stack Development Training</h3><p>Built frontend/backend/API/database projects while improving deployment and maintainability habits.</p></article>
+            <article className="card image-frame"><SafeImage src="/images/gidion-legal-awareness.jpg" alt="Gidion during legal awareness communication event" fallbackTitle="Legal awareness image pending" fallbackHint="Add /images/gidion-legal-awareness.jpg to enable this proof visual." /><h3>Product & Event Planning</h3><p>Worked on planning, audience communication, and product/event execution structure.</p></article>
+          </div>
+        </section>
+
+        <section id="contact" className="section card">
+          <h2 className="gradient-text">Contact</h2>
+          <p>Available for internships, junior full-stack roles, freelance websites, dashboard builds, and product-focused collaborations.</p>
+          <div className="contact-grid">
+            <a className="contact-item" href="mailto:ondarigidion@gmail.com">Email: ondarigidion@gmail.com</a>
+            <a className="contact-item" href="tel:+254742917779">WhatsApp / Phone: +254742917779</a>
+            <a className="contact-item" href="https://github.com/GidionOndari" target="_blank" rel="noreferrer">GitHub: https://github.com/GidionOndari</a>
+          </div>
+        </section>
+      </main>
+    </div>
+  )
+}
