@@ -10,3 +10,6 @@ h1,h2{margin-top:.4rem;background:linear-gradient(90deg,#fff,var(--gold),#fca5a5
 @media(max-width:720px){.hero{padding:1.3rem}.checklist{columns:1}}
 
 .btn:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}td,th{font-size:clamp(.83rem,2.4vw,.96rem)}body{overflow-x:hidden}
+
+.event-image{margin:0 0 1rem;border:1px solid rgba(250,204,21,.52);border-radius:16px;overflow:hidden;background:#0b0909;box-shadow:0 0 0 1px rgba(220,38,38,.35),0 14px 28px rgba(0,0,0,.5)}.event-image img{display:block;width:100%;max-height:340px;object-fit:cover;transition:transform .38s}.event-image:hover img{transform:scale(1.04)}.event-image figcaption{padding:.65rem .8rem;margin:0;background:linear-gradient(100deg,rgba(26,5,5,.9),rgba(62,8,8,.75),rgba(70,48,8,.85));color:#f8e7b2;font-size:.84rem}.hero-image{margin-top:1rem}
+.hero-image img{object-position:center 20%}.gallery-card p{line-height:1.55;color:#f2e8db}
